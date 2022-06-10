@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База знаний</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/simplebar.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body_container">
+  <main class="main_container">
+    <section class="section_checkbox">
+      <h3 class="section_checkbox--header">Категории:</h3>
+      <label for="check-1">
+        <input type="checkbox" name="check" id="check-1" class="section_checkbox--input" checked>
+        Динозавры
+        <span></span>
+      </label>
+      <label for="check-2">
+        <input type="checkbox" name="check" id="check-2" class="section_checkbox--input">
+        Медведи
+        <span></span>
+      </label>
+      <label for="check-3">
+        <input type="checkbox" name="check" id="check-3" class="section_checkbox--input">
+        Косули
+        <span></span>
+      </label>
+      <label for="check-4">
+        <input type="checkbox" name="check" id="check-4" class="section_checkbox--input">
+        Лисы
+        <span></span>
+      </label>
+      <label for="check-5">
+        <input type="checkbox" name="check" id="check-5" class="section_checkbox--input">
+        Волки
+        <span></span>
+      </label>
+      <label for="check-6">
+        <input type="checkbox" name="check" id="check-6" class="section_checkbox--input">
+        Олени и лоси
+        <span></span>
+      </label>
+    </section>
+
+    <section class="section_select">
+      <select name="select">
+        <option value="Материал">Материал</option>
+        <option value="Древесина">Древесина</option>
+        <option value="Металл">Металл</option>
+        <option value="Камень">Камень</option>
+        <option value="Пластик">Пластик</option>
+        <option value="Композитный">Композитный</option>
+        <option value="Гипс">Гипс</option>
+      </select>
+    </section>
+
+    <section class="section_map">
+      <div id="myMap1" class="section_map--container"></div>
+    </section>
+
+    <section class="section_scrollbar">
+      <div class="section_scrollbar--customScroll" data-simplebar>
+        Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно
+        развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены
+        отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный
+        эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее:
+        непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом,
+        однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что
+        социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты
+        для первоочередных требований.
+      </div>
+    </section>
+
+    <section class="section_form">
+      <form class="section_form--group" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+        <!-- <label required class="section_form--label" for="name">Как вас зовут?</label> -->
+        <input required class="section_form--input" name="Имя" type="text" placeholder="Имя*" data-validate-field="name" id="name">
+        <!-- <label required class="section_form--label" for="phone">Укажите ваш телефон</label> -->
+        <input required class="section_form--input" name="Телефон" type="tel" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone" id="phone">
+        <!-- <label required class="section_form--label" for="email">Укажите ваш e-mail</label> -->
+        <input required class="section_form--input" name="E-mail" type="email" placeholder="E-mail*" data-validate-field="mail" id="email">
+        <button class="section_form--button" type="submit">Заказать</button>
+      </form>
+    </section>
+
+    <section class="section_tooltip">
+      <div class="section_tooltip--text">
+        Следует отметить, что социально-&nbsp;экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+        <button class="section_tooltip--button" aria-describedby="tooltip">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z" fill="#BCBCBC"/>
+            </svg>
+            <div class="section_tooltip--popup" role="tooltip" id="tooltip">Глава 2, страница 176</div>
+        </button>
+      </div>
+    </section>
+  </main>
+  <script src="js libraries/choices.min.js"></script>
+  <script src="js/select.js"></script>
+  <script src="js libraries/api-key-map.js" type="text/javascript"></script>
+  <script src="js/txt-js-map.js" type="text/javascript"></script>
+  <script src="js libraries/simplebar.min.js"></script>
+  <script src="js libraries/just-validate.min.js"></script>
+  <script src="js libraries/inputmask.min.js"></script>
+  <script src="js/inputmask-validate.js"></script>
+</body>
+
+</html>
